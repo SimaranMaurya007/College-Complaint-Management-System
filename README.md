@@ -39,27 +39,22 @@ The application window will open, allowing you to register complaints, check the
 - The admin section (for checking all complaints) is password-protected. The default password is `implementer` (see `ComplaintGUI.java`).
 
 ## Screenshots
-Below are example screenshots demonstrating the application's main features:
 
 - **Main Menu:**
   ![Main Menu](Main%20Menu.png)
-  *Central navigation for all system features.*
 
 - **Complaint Registration Form:**
   ![Register Complaint](Register%20Complaint.png)
-  *User input form for registering new complaints.*
 
 - **Complaint Status Window:**
   ![Status](Status.png)
-  *Real-time tracking of complaint progress.*
 
 - **Admin Report View:**
   ![Complaints filled](Complaints%20filled.png)
-  *Tabular display of all filed complaints for administrative review.*
 
 - **Admin Login:**
   ![Admin Login](Admin.png)
-  *Password-protected admin access for complaint management.*
+
 
 - **Complaint Record:**
   ![Record](Record.png)
