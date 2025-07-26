@@ -21,7 +21,7 @@ public class compRegister implements ActionListener {
     private String[] depts = { "Faculty", "Staff", "Student" };
     private String[] priorities = { "1", "2", "3" };
     private String[] types = { "Internet", "Water", "Electricity", "Telephone","Lifts","AC"
-    ,"Furniture", "PC Maintanance"};
+    ,"Furniture" };
     private JTextArea taComp;
     private JTextField complaintNoField;
     private JTextField emailField, addressField;
@@ -35,7 +35,7 @@ public class compRegister implements ActionListener {
 
         win.setModalityType(ModalityType.APPLICATION_MODAL);
         win.setTitle("Register Complaint");
-        win.setSize(750, 500);
+        win.setSize(500, 500);
         win.setLayout(new FlowLayout());
 
         dept = new Choice();

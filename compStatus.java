@@ -21,7 +21,7 @@ public class compStatus implements ActionListener {
         win = new JDialog();
         win.setModalityType(ModalityType.APPLICATION_MODAL);
         win.setTitle("Complaint Status");
-        win.setSize(500, 400);
+        win.setSize(500, 300);
         win.setLayout(new GridLayout(2, 1));
         this.cfile = cfile;
 

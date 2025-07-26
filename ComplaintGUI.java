@@ -19,7 +19,7 @@ public class ComplaintGUI implements ActionListener, WindowListener {
     private JFrame win;
     private compFile cfile;
     private JButton menuBtns[];
-    private final String password = "admin123";
+    private final String password = "implementer";
 
     public ComplaintGUI() {
         win = new JFrame();
@@ -29,9 +29,9 @@ public class ComplaintGUI implements ActionListener, WindowListener {
         win.setTitle("Complaint Box");
         win.setSize(500, 600);
         win.addWindowListener(this);
-        win.setLayout(new GridLayout(6, 1));
+        win.setLayout(new GridLayout(5, 1));
 
-        menuBtns = new JButton[6];
+        menuBtns = new JButton[5];
         // for (int i = 0; i < menuBtns.length; ++i) {
         //     menuBtns[i] = new JButton();
 		// 	menuBtns[i].setFont(new Font("Sans Serif", Font.BOLD, 16));
@@ -63,16 +63,8 @@ public class ComplaintGUI implements ActionListener, WindowListener {
         menuBtns[0].setText("MAIN MENU");
         menuBtns[1].setText("1. Lodge Complaint");
         menuBtns[2].setText("2. Complaint Status");
-        menuBtns[3].setText("3. Update Status");
-        menuBtns[4].setText("4. Complaint Records");
-        menuBtns[5].setText("5. Statistical Reports");
-        // menuBtns[5] = new JButton(); // Reports button
-        // menuBtns[5].setFont(new Font("Sans Serif", Font.BOLD, 16));
-        // menuBtns[5].setBackground(new Color(128, 223, 255));
-        // menuBtns[5].setBorder(BorderFactory.createMatteBorder(3, 3, 3, 3, new Color(0, 37, 51)));
-        // menuBtns[5].setText("5. Reports");
-        // menuBtns[5].addActionListener(this);
-        // win.add(menuBtns[5]);
+        menuBtns[3].setText("3. Check Complaint Filed");
+        menuBtns[4].setText("4. Report");
         menuBtns[0].setEnabled(false);
         win.setVisible(true);
     }
@@ -93,27 +85,7 @@ public class ComplaintGUI implements ActionListener, WindowListener {
                 JOptionPane.showMessageDialog(win, "Wrong password");
             }
         } else if (menuBtns[4] == e.getSource()) {
-            //new compReport(cfile);
-            String pwdEntered = JOptionPane.showInputDialog(win, "Enter Password: ");
-            if (pwdEntered == null) {
-                // do nothing
-            } else if (pwdEntered.equals(password)) {
-               new compReport(cfile);
-            } else {
-                JOptionPane.showMessageDialog(win, "Wrong password");
-            }
-        }
-        else if (menuBtns[5] == e.getSource()) {
-            // Open the Reports dialog or window
-            //new compReportsDialog(cfile);
-            String pwdEntered = JOptionPane.showInputDialog(win, "Enter Password: ");
-            if (pwdEntered == null) {
-                // do nothing
-            } else if (pwdEntered.equals(password)) {
-                new compReportsDialog(cfile);
-            } else {
-                JOptionPane.showMessageDialog(win, "Wrong password");
-            }
+            new compReport(cfile);
         }
     }
 
@@ -151,6 +123,4 @@ public class ComplaintGUI implements ActionListener, WindowListener {
     public void windowDeactivated(WindowEvent e) {
         // TODO Auto-generated method stub
     }
-
-    
 }

@@ -1,5 +1,4 @@
 import java.io.Serializable;
-import java.util.Date;
 
 @SuppressWarnings("serial")
 public class complaint implements Serializable {
@@ -11,8 +10,6 @@ public class complaint implements Serializable {
     private String type;
     private String email;
     private String address; // Added address field
-    private Date lodgedDate;
-    private Date resolvedDate;
 
     public complaint(int cNo, String dept, String comp, String soln, int priority, String type, String email, String address) {
         this.cNo = cNo;
@@ -22,9 +19,9 @@ public class complaint implements Serializable {
         this.priority = priority;
         this.type = type;
         this.email = email;
-        this.address = address;
-        this.lodgedDate = new Date(); // Set the lodged date when the complaint is created
+        this.address = address; // Added line to initialize the address field
     }
+
     // Add getAddress method
     
 
@@ -57,18 +54,6 @@ public class complaint implements Serializable {
 
     public String getAddress() {
         return address;
-    }
-    public Date getLodgedDate() {
-        return lodgedDate;
-    }
-    
-    public Date getResolvedDate() {
-        return resolvedDate;
-    }
-
-    public void resolveComplaint(String solution) {
-        this.soln = solution;
-        this.resolvedDate = new Date(); // Set the resolved date when the complaint is resolved
     }
 
     @Override

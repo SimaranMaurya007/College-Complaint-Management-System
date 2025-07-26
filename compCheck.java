@@ -25,7 +25,7 @@ public class compCheck implements ActionListener {
         win = new JDialog();
         win.setModalityType(ModalityType.APPLICATION_MODAL);
         win.setTitle("Complaints Filed");
-        win.setSize(600, 500);
+        win.setSize(500, 500);
         win.setLayout(new GridLayout(2, 1));
 
         JTable tableAllComps = cfile.returnTable();
